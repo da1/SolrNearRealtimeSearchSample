@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title #{@title}
+  %body
+    #header
+      %h1 ヒウィッヒヒー
+    = haml :post_form
+    = haml :search_form
+    #contents
+      %h2 your posts
+      - @tweets.each do |tw|
+        %li
+          #{tw.tweet}
+          #{tw.created_at}

@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title #{@title}
+  %body
+    #header
+      %h1 ヒウィッヒヒー
+    #link
+      %a(href="/")<
+        top
+    = haml :post_form
+    = haml :search_form
+    #contents
+      %h2 #{@length} hit
+      - @result.each do |doc|
+        %li
+          #{doc["tweet_ss"][0]}
+          #{doc["time_dts"][0]}
